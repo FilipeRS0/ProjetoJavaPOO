@@ -70,5 +70,10 @@ public class mercado {
     }
     
     private static void verCarrinho() {
+   
+   }
+    
+    private static void finalizarCompra(){
+    
     }
         
