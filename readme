@@ -1,1 +1,3 @@
+O programa consiste em uma interface simples, que mostra ao usuário as opções de produtos disponíveis para compra. esses produtos são objetos da classe Produto, que possuem os atributos: id , nome e preço,  setados através das operações SetNome() e SetPreço() dessa classe. O preço setado é transformado de int pra String através do method da classe Utils, NumberFormat().
 
+Através do método CadastrarProduto(), o usuário deve cadastrar os produtos no sistema, determinando seu nome e preço, ao cadastrar um produto, as informações são armazenadas em um ArrayList chamada Produtos. A lista de produtos cadastrados é exibida através do método ListarProdutos() utilizando um foreach para percorrer pelo array e printa as informações como nome, preço dos produtos.
