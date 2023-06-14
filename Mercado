@@ -66,7 +66,49 @@ public class mercado {
     }
     
     private static void comprarProdutos() {
-    
+        if (produtos.size() > 0) {
+            System.out.println("Código do produto: ");
+            System.out.println("--------------Produtos Disponíveis --------------");
+            for (Produto p : produtos) {
+                System.out.println(p);
+            }
+
+            int id = Integer.parseInt(input.next());
+            boolean isPresent = false;
+
+            for (Produto p : produtos) {
+                if (p.getId() == id) {
+                    int qtd = 0;
+                    try {
+                        qtd = carrinho.get(p);
+                        carrinho.put(p, qtd + 1);
+                    } catch (NullPointerException e) {
+                        carrinho.put(p, 1);
+                    }
+                    System.out.println(p.getNome() + " adicionado ao carrinho.");
+                    isPresent = true;
+                    break;
+                }
+            }
+
+            if (isPresent) {
+                System.out.println("Deseja adicionar outro produto ao carrinho?");
+                System.out.println("Digite 1 para continuar ou 0 para finalizar a compra.");
+                int option = Integer.parseInt(input.next());
+
+                if (option == 1) {
+                    comprarProdutos();
+                } else {
+                    finalizarCompra();
+                }
+            } else {
+                System.out.println("Produto não encontrado.");
+                menu();
+            }
+        } else {
+            System.out.println("Não existem produtos cadastrados!");
+            menu();
+        }
     }
     
     private static void verCarrinho() {
