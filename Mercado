@@ -162,7 +162,7 @@ public class mercado {
         }
         System.out.println("O valor da sua compra é: " + Utils.doubleToString(valorDaCompra));
         carrinho.clear();
-        System.out.println("Volte sempre!");
+        System.out.println("Volte sempre!")
         menu();
     }
 
