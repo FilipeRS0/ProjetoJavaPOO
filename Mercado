@@ -17,3 +17,44 @@ public class mercado {
         carrinho = new HashMap<>();
         menu();
     }
+    
+    private static void menu(){
+        System.out.println("------------------------------------------------------------------------");
+        System.out.println("----------------------- Bem vindo ao ao mercado Wayne ------------------");
+        System.out.println("------------------------------------------------------------------------");
+        System.out.println("----------------------- Selecione a opção desejada ---------------------");
+        System.out.println("------------------------------------------------------------------------");
+        System.out.println("-----------------------| 1 - Cadastrar produto   |----------------------");
+        System.out.println("-----------------------| 2 -  Listar produto     |----------------------");
+        System.out.println("-----------------------| 3 - Comprar produto (s) |----------------------");
+        System.out.println("-----------------------| 4 - Ver carrinho        |----------------------");
+        System.out.println("-----------------------| 5 - Sair                |----------------------");
+        System.out.println("------------------------------------------------------------------------");
+
+        int option = input.nextInt();
+
+        switch (option){
+            case 1:
+                cadastrarProdutos();
+                break;
+            case 2:
+                listarProdutos();
+                break;
+            case 3:
+                comprarProdutos();
+                break;
+            case 4:
+                verCarrinho();
+                break;
+            case 5:
+                System.out.println("Obrigado pela preferência!");
+                System.exit(1);
+            default:
+                System.out.println("Opção inválida!");
+                menu();
+                break;
+
+       }
+    }
+    
+        
