@@ -60,4 +60,8 @@ public class mercado {
     private static void cadastrarProdutos(){
      
     }
+    
+    private static void listarProdutos() {
+        
+    }
         
