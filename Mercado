@@ -64,4 +64,8 @@ public class mercado {
     private static void listarProdutos() {
         
     }
+    
+    private static void comprarProdutos() {
+    
+    }
         
