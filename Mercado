@@ -150,6 +150,18 @@ public class mercado {
    }
     
     private static void finalizarCompra(){
+    Double valorDaCompra = 0.0;
+        System.out.println("Seus Produtos!");
+
+        for(Produto p : carrinho.keySet()){
+            int qtd = carrinho.get(p);
+            valorDaCompra += p.getPreco() * qtd;
+            System.out.println(p);
+            System.out.println("Quantidade" + qtd);
+            System.out.println("----------------");
+        }
+        
+    }
     
     }
         
