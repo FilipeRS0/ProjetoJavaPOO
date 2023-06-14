@@ -58,6 +58,33 @@ public class mercado {
     }
     
     private static void cadastrarProdutos(){
+    ``` private static void cadastrarProdutos(){
+        System.out.println("Nome do produto: ");
+        String nome = input.next();
+
+        System.out.println("preço do produto: ");
+        Double preco = input.nextDouble();
+
+        Produto produto = new Produto(nome, preco);
+        produtos.add(produto);
+
+        System.out.println(produto.getNome() + " cadastrado com sucesso!");
+        menu();
+
+    }
+    private static void listarProdutos() {
+        if (produtos.size() > 0) {
+            System.out.println("Lista de produtos! \n");
+
+            for (Produto p : produtos) {
+                System.out.println(p);
+            }
+        }else {
+            System.out.println("Nenhum produto cadastrado!");
+        }
+
+        menu();
+    }```
      
     }
     
